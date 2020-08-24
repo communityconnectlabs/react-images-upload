@@ -236,6 +236,7 @@ class ReactImageUploadComponent extends React.Component {
             onChange={this.onDropFile}
             onClick={this.onUploadClick}
             accept={this.props.accept}
+            style={this.props.inputStyles}
           />
           { this.props.withPreview ? this.renderPreview() : null }
         </div>
@@ -266,6 +267,7 @@ ReactImageUploadComponent.defaultProps = {
   errorClass: "",
   style: {},
   errorStyle: {},
+  inputStyles: {},
   singleImage: false,
   onChange: () => {},
   defaultImages: []
@@ -295,6 +297,7 @@ ReactImageUploadComponent.propTypes = {
   fileTypeError: PropTypes.string,
   errorClass: PropTypes.string,
   errorStyle: PropTypes.object,
+  inputStyles: PropTypes.object,
   singleImage: PropTypes.bool,
   defaultImages: PropTypes.array
 };

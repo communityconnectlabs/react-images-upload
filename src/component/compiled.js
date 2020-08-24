@@ -349,7 +349,8 @@ var ReactImageUploadComponent = function (_React$Component) {
             multiple: !this.props.singleImage,
             onChange: this.onDropFile,
             onClick: this.onUploadClick,
-            accept: this.props.accept
+            accept: this.props.accept,
+            style: this.props.inputStyles
           }),
           this.props.withPreview ? this.renderPreview() : null
         )
@@ -382,6 +383,7 @@ ReactImageUploadComponent.defaultProps = {
   errorClass: "",
   style: {},
   errorStyle: {},
+  inputStyles: {},
   singleImage: false,
   onChange: function onChange() {},
   defaultImages: []
@@ -411,6 +413,7 @@ ReactImageUploadComponent.propTypes = {
   fileTypeError: _propTypes2.default.string,
   errorClass: _propTypes2.default.string,
   errorStyle: _propTypes2.default.object,
+  inputStyles: _propTypes2.default.object,
   singleImage: _propTypes2.default.bool,
   defaultImages: _propTypes2.default.array
 };

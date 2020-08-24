@@ -21,6 +21,7 @@ interface Props {
   fileTypeError?: string
   errorClass?: string
   errorStyle?: object
+  inputStyles?: object
   singleImage?: boolean
   style?: object
   defaultImages?: string[]
